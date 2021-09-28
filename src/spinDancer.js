@@ -2,7 +2,7 @@ var spinDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="spin"></span>');
   this.setPosition(top, left);
-  this.step();
+  // this.step();
 };
 
 spinDancer.prototype = Object.create(makeDancer.prototype);
@@ -10,8 +10,6 @@ spinDancer.prototype.constructor = spinDancer;
 
 spinDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
-
-  // this.$node.onClick();
 };
 
 // spinDancer.prototype.setPosition = function(top, left) {
@@ -22,6 +20,12 @@ spinDancer.prototype.step = function() {
 //   this.$node.css(styleSettings);
 // };
 
-// spinDancer.prototype.onClick = function() {
-//   this.$node.fadeIn(2500);
-// };
+
+spinDancer.prototype.spin = function() {
+  this.$node.animate({
+    height: '150px',
+    width: '150px'
+  }, (function() {
+    this.spin();
+  }).bind(this));
+};

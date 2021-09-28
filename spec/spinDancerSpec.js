@@ -13,9 +13,9 @@ describe('spinDancer', function() {
   });
 
   it('should have a step function that makes its node spin', function() {
-    sinon.spy(spinDancer.$node, 'step');
-    spinDancer.step();
-    expect(spinDancer.step.called).to.be.true;
+    sinon.spy(newSpinDancer.$node, 'animate');
+    newSpinDancer.spin();
+    expect(newSpinDancer.$node.animate.called).to.be.true;
   });
 
   describe('dance', function() {
