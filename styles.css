@@ -1,4 +1,6 @@
 body, html{
+  background: url('background.jpeg');
+  background-size: cover;
   height:100%;
 }
 body{
@@ -11,29 +13,47 @@ body, a:link, a:visited, a:active{
 }
 .title, .lineUp, .addDancerButton{
   padding:5px 12px;
-  float:right;
+  /* float:right; */
+  width: 100px;
+  display: inline-block;
 }
 .topbar{
-  height:32px;
+  padding: 15px 10%;
+  height: 32px;
   background-color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .title{
   background-color: #777;
 }
 .dancer{
-  border: 15px solid red;
+  background: url('ball.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
   position:absolute;
-  shape-outside: margin-box;
+  width:  100px;
+  height: 100px;
 }
 .move {
-  border: 15px solid red;
+  background: url('car.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
   position:absolute;
-  shape-outside: margin-box;
+  width:  100px;
+  height: 100px;
 }
 .spin {
-  border: 15px solid red;
+  background: url('spin.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
   position:absolute;
-  shape-outside: margin-box;
+  width:  100px;
+  height: 100px;
   -webkit-animation: spin 1s linear infinite;
   -moz-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;

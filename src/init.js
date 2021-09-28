@@ -29,11 +29,19 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
-  });
-});
 
+    $('.spin').mouseover(function() {
+      $(this).animate({
+        height: '150px',
+        width: '150px'
+      });
+    });
+  });
+
+});
 $('.lineUpDancerButton').on('click', function(event) {
   window.dancers.forEach(function(dancer) {
     dancer.lineUp();
   });
 });
+
